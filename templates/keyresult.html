@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<center><h4>List based on your Keywords</h4></center>
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Sl No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Genre</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Keywords</th>
+        <th scope="col">Positive Review</th>
+        <th scope="col">Negative Review</th>
+        <th scope="col">Neutral Review</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+    {% for t,g,r,re,p,n,nu in x %}
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td >{{t}}</td>
+        <td >{{g}}</td>
+        <td >{{r}}</td>
+        <td >{{re}}</td>
+        <td >{{p}}</td>
+        <td >{{n}}</td>
+        <td >{{nu}}</td>
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+
+{% endblock body %}
+
+
+
+
+

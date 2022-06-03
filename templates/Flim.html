@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+  <div class="container">
+
+
+        <form action = "/result" method="POST">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Enter your Fav Flim</label>
+              <input type="text" class="form-control" name="movie_name" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div class="input-group mb-3">
+                <input type="number" required class="form-control" placeholder="No of Movies ex : 10" name = "numbers" aria-label="Username">
+                <input type="number" required class="form-control" placeholder="No of Ratings and above ex : 2" name = "rate" aria-label="Username">
+              </div>  
+             
+            </div>
+           
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+    {% endblock body %}
+
+
+ 
