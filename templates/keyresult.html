@@ -8,9 +8,9 @@
       <tr>
         <th scope="col">Sl No</th>
         <th scope="col">Name</th>
-        <th scope="col">Genre</th>
-        <th scope="col">Rating</th>
         <th scope="col">Keywords</th>
+        <th scope="col">Rating</th>
+       
         <th scope="col">Positive Review</th>
         <th scope="col">Negative Review</th>
         <th scope="col">Neutral Review</th>
@@ -18,17 +18,19 @@
       </tr>
     </thead>
     <tbody>
-    {% for t,g,r,re,p,n,nu in x %}
+      {% for t,g,r,re,p,n,nu,img in x %}
       <tr>
         <th scope="row">{{loop.index}}</th>
-        <td >{{t}}</td>
-        <td >{{g}}</td>
+        
+       
+        <td ><p class ="ttt">{{t}}</p></td>
+        
+        
+        <td class="reviews_ttt">{{re}}</td>
         <td >{{r}}</td>
-        <td >{{re}}</td>
         <td >{{p}}</td>
         <td >{{n}}</td>
         <td >{{nu}}</td>
-        
       </tr>
       {% endfor %}
     </tbody>

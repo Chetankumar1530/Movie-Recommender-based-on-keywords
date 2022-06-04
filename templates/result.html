@@ -9,20 +9,21 @@
         <th scope="col">Sl No</th>
         <th scope="col">Name</th>
         <th scope="col">Genre</th>
-        <th scope="col">Release Date</th>
         <th scope="col">Rating</th>
-        <th scope="col">Positive Review</th>
-        <th scope="col">Negative Review</th>
-        <th scope="col">Neutral Review</th>
+        <th scope="col">Positive Reviews</th>
+        <th scope="col">Negative Reviews</th>
+        <th scope="col">Neutral Reviews</th>
       </tr>
     </thead>
     <tbody>
-    {% for t,g,r,re,p,n,nu in x %}
+    {% for t,g,r,re,p,n,nu,img in x %}
       <tr>
         <th scope="row">{{loop.index}}</th>
-        <th >{{t}}</th>
-        <td >{{g}}</td>
-        <td >{{re}}</td>
+        
+        <th ><img src="{{img}}" class="img-thumbnail" alt="..."></th>
+        <td ><p class ="ttt">{{t}}</p><p>{{re}}</p><p>({{g}})</p></td>
+        
+       
         <td >{{r}}</td>
         <td >{{p}}</td>
         <td >{{n}}</td>
